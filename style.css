@@ -1,0 +1,75 @@
+/* ---------- Base ---------- */
+body {
+  margin: 0;
+  padding: 50px 20px;
+  font: 15px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555;
+  background: #fff;
+}
+
+a {
+  color: #267CB9;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+h3, h4 { color: #222; margin: 0 0 12px; }
+h3 { font-size: 22px; }
+h4 { font-size: 18px; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 18px 0;
+}
+
+/* ---------- Two-column layout ---------- */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+header {
+  flex: 0 0 240px;
+  position: sticky;   /* sidebar stays put while you scroll */
+  top: 50px;
+}
+
+section {
+  flex: 1;
+  padding-bottom: 50px;
+}
+
+/* ---------- Sidebar pieces ---------- */
+.profile {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.updated {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ---------- Phones: stack the columns ---------- */
+@media (max-width: 720px) {
+  body { padding: 30px 16px; }
+  .wrapper { flex-direction: column; gap: 20px; }
+  header { position: static; flex: none; }
+}
